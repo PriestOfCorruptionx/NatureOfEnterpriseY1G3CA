@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Companion</title>
+  <style>
+    :root {
+      --bg: #eef5f1;
+      --card: #ffffff;
+      --text: #102018;
+      --muted: #5c6f64;
+      --green: #1f7a4d;
+      --dark: #0f3d2e;
+      --accent: #d9f5e5;
+      --danger: #b83232;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--dark), var(--green));
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background: white;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    nav button {
+      border: none;
+      background: var(--accent);
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--dark);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .submit-btn {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit-btn:hover {
+      background: var(--dark);
+    }
+
+    .notice {
+      background: #fff7d6;
+      border-left: 5px solid #d9a300;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .high-contrast {
+      --bg: #000;
+      --card: #111;
+      --text: #fff;
+      --muted: #ddd;
+      --green: #00ff88;
+      --dark: #00cc66;
+      --accent: #222;
+    }
+
+    .large-text {
+      font-size: 120%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Campus Companion</h1>
+  <p>Your all-in-one student support app</p>
+</header>
+
+<nav>
+  <button onclick="showSection('dashboard')">Dashboard</button>
+  <button onclick="showSection('timetable')">Timetable</button>
+  <button onclick="showSection('locations')">Campus Map</button>
+  <button onclick="showSection('societies')">Societies</button>
+  <button onclick="showSection('canteen')">Canteen</button>
+  <button onclick="showSection('lost')">Lost & Found</button>
+  <button onclick="showSection('helpdesk')">Helpdesk</button>
+  <button onclick="showSection('accessibility')">Accessibility</button>
+</nav>
+
+<main>
+
+<section id="dashboard" class="active">
+  <h2>Student Dashboard</h2>
+  <div class="notice">
+    Reminder: Library closes early this Friday at 4:00 PM.
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Next Class</h3>
+      <p>Web Development — Room B204</p>
+      <span class="tag">10:00 AM</span>
+    </div>
+
+    <div class="card">
+      <h3>Today’s Canteen Special</h3>
+      <p>Chicken curry with rice</p>
+      <span class="tag">€5.50</span>
+    </div>
+
+    <div class="card">
+      <h3>Upcoming Society Event</h3>
+      <p>Gaming Society FIFA Tournament</p>
+      <span class="tag">Wednesday</span>
+    </div>
+  </div>
+</section>
+
+<section id="timetable">
+  <h2>Timetable / Events</h2>
+  <div class="grid">
+    <div class="card"><h3>Monday</h3><p>Programming — 9:00 AM</p><p>Business Studies — 1:00 PM</p></div>
+    <div class="card"><h3>Tuesday</h3><p>Database Systems — 11:00 AM</p><p>Study Group — 3:00 PM</p></div>
+    <div class="card"><h3>Wednesday</h3><p>Web Development — 10:00 AM</p><p>Project Lab — 2:00 PM</p></div>
+    <div class="card"><h3>Thursday</h3><p>Networking — 9:30 AM</p><p>Assignment Workshop — 12:00 PM</p></div>
+  </div>
+</section>
+
+<section id="locations">
+  <h2>Campus Map / Location Directory</h2>
+  <div class="grid">
+    <div class="card"><h3>Library</h3><p>Building A, Floor 1</p><span class="tag">Quiet Study</span></div>
+    <div class="card"><h3>Canteen</h3><p>Student Centre, Ground Floor</p><span class="tag">Food & Drinks</span></div>
+    <div class="card"><h3>IT Helpdesk</h3><p>Building C, Room C102</p><span class="tag">Tech Support</span></div>
+    <div class="card"><h3>Sports Hall</h3><p>North Campus</p><span class="tag">Fitness</span></div>
+  </div>
+</section>
+
+<section id="societies">
+  <h2>Society Events</h2>
+  <div class="grid">
+    <div class="card"><h3>Gaming Society</h3><p>FIFA tournament at 5 PM.</p><span class="tag">Wednesday</span></div>
+    <div class="card"><h3>Coding Club</h3><p>Beginner JavaScript workshop.</p><span class="tag">Thursday</span></div>
+    <div class="card"><h3>Music Society</h3><p>Open mic night in the student lounge.</p><span class="tag">Friday</span></div>
+  </div>
+</section>
+
+<section id="canteen">
+  <h2>Canteen Menu</h2>
+  <div class="grid">
+    <div class="card"><h3>Breakfast</h3><p>Toast, eggs, tea</p><span class="tag">€3.00</span></div>
+    <div class="card"><h3>Lunch</h3><p>Chicken curry with rice</p><span class="tag">€5.50</span></div>
+    <div class="card"><h3>Vegetarian</h3><p>Pasta with tomato sauce</p><span class="tag">€4.80</span></div>
+    <div class="card"><h3>Snack</h3><p>Fruit cup and water</p><span class="tag">€2.20</span></div>
+  </div>
+</section>
+
+<section id="lost">
+  <h2>Lost & Found</h2>
+
+  <form onsubmit="addLostItem(event)">
+    <label>Item name</label>
+    <input id="lostItem" required placeholder="Example: Black headphones">
+
+    <label>Location found</label>
+    <input id="lostLocation" required placeholder="Example: Library">
+
+    <button class="submit-btn">Add Item</button>
+  </form>
+
+  <div id="lostList" class="grid">
+    <div class="card"><h3>Blue Water Bottle</h3><p>Found near the canteen.</p></div>
+    <div class="card"><h3>Student ID Card</h3><p>Found in Building B.</p></div>
+  </div>
+</section>
+
+<section id="helpdesk">
+  <h2>Helpdesk Tickets</h2>
+
+  <form onsubmit="submitTicket(event)">
+    <label>Your name</label>
+    <input id="studentName" required placeholder="Example: Alex Murphy">
+
+    <label>Issue category</label>
+    <select id="issueType">
+      <option>Wi-Fi Problem</option>
+      <option>Login Issue</option>
+      <option>Printer Problem</option>
+      <option>General Question</option>
+    </select>
+
+    <label>Describe the issue</label>
+    <textarea id="issueText" required placeholder="Explain your issue"></textarea>
+
+    <button class="submit-btn">Submit Ticket</button>
+  </form>
+
+  <div id="ticketResult"></div>
+</section>
+
+<section id="accessibility">
+  <h2>Accessibility Settings</h2>
+  <div class="card">
+    <p>Use these settings to make the app easier to read.</p>
+    <button class="submit-btn" onclick="toggleText()">Toggle Large Text</button>
+    <button class="submit-btn" onclick="toggleContrast()">Toggle High Contrast</button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Campus Companion uses fictional data for assignment purposes only.</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll("section").forEach(section => {
+      section.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+  }
+
+  function addLostItem(event) {
+    event.preventDefault();
+
+    const item = document.getElementById("lostItem").value;
+    const location = document.getElementById("lostLocation").value;
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${item}</h3><p>Found at ${location}.</p>`;
+
+    document.getElementById("lostList").appendChild(card);
+
+    document.getElementById("lostItem").value = "";
+    document.getElementById("lostLocation").value = "";
+  }
+
+  function submitTicket(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("studentName").value;
+    const type = document.getElementById("issueType").value;
+    const issue = document.getElementById("issueText").value;
+
+    document.getElementById("ticketResult").innerHTML = `
+      <div class="card">
+        <h3>Ticket Submitted</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Category:</strong> ${type}</p>
+        <p><strong>Issue:</strong> ${issue}</p>
+        <span class="tag">Status: Open</span>
+      </div>
+    `;
+
+    document.getElementById("studentName").value = "";
+    document.getElementById("issueText").value = "";
+  }
+
+  function toggleText() {
+    document.body.classList.toggle("large-text");
+  }
+
+  function toggleContrast() {
+    document.body.classList.toggle("high-contrast");
+  }
+</script>
+
+</body>
+</html>
