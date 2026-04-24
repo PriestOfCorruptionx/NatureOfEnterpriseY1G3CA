@@ -1,50 +1,115 @@
 # Campus Companion
-Live Website: https://noeca3.netlify.app/
-Campus Companion is a fictional student support web app designed for first-year students. It helps students view campus information, events, timetable details, canteen menus, lost and found items, and helpdesk tickets.
+
+Git Repository:
+https://github.com/PriestOfCorruptionx/NatureOfEnterpriseY1G3CA
+
+Live Website:
+https://noeca3.netlify.app/
+
+## Project Overview
+
+Campus Companion is a fictional student support web app designed for first-year students. It helps students access timetable information, campus locations, society events, canteen menus, lost and found services, helpdesk tickets, reminders, and accessibility settings.
+
+All data used is fictional for assignment purposes only.
+
+---
 
 ## Chosen Stack
 
-- HTML
-- CSS
-- JavaScript
-- GitHub for version control
+* HTML
+* CSS
+* JavaScript
+* Netlify (deployment)
+* GitHub (version control)
+
+---
 
 ## Features
 
-- Student dashboard
-- Timetable / events
-- Campus location directory
-- Society events
-- Canteen menu
-- Lost and found form
-- Helpdesk ticket form
-- In-app reminders
-- Accessibility settings:
-  - Large text mode
-  - High contrast mode
+* Timetable / Events
+* Campus Map / Location Directory
+* Society Events
+* Canteen Menu
+* Lost & Found
+* Helpdesk Tickets
+* In-app Reminders
+* Accessibility Settings
 
-## Data
+  * Large Text Mode
+  * High Contrast Mode
 
-All data used in this project is fictional. No real student names, personal information, or real campus data is collected.
+---
 
 ## How to Run Locally
 
-1. Download or clone the repository.
-2. Open the project folder.
-3. Open `index.html` in a web browser.
+1. Clone or download the repository
 
-No database or login is required.
+2. Open the project folder
 
-## AI Use
+3. Open `index.html` in your browser
 
-AI tools were used to help plan, generate, review and improve the application. The prompts used are included in `AI_PROMPT_LOG.md`.
+No package installation is required.
+
+No database connection is required.
+
+No authentication is required.
+
+---
+
+## Build Command
+
+No build command is required because this project uses plain HTML, CSS, and JavaScript.
+
+For Netlify deployment:
+
+* Build command: leave blank
+* Publish directory: leave blank (or `/` if requested)
+
+---
+
+## Environment Variables
+
+No environment variables are required for this version of the project.
+
+This project does not use:
+
+* Supabase keys
+* API keys
+* Authentication secrets
+* Database credentials
+
+---
+
+## Fictional Data
+
+All student names, locations, events, menus, and tickets are fictional and created for educational purposes only.
+
+No real personal data is stored or processed.
+
+---
 
 ## Accessibility
 
-The app includes:
-- Clear navigation buttons
-- Labelled form fields
-- High contrast mode
-- Large text mode
-- Simple page structure
-- Readable card layout
+This app includes:
+
+* Clear navigation
+* Labelled forms
+* Keyboard-friendly structure
+* High contrast mode
+* Large text mode
+* Readable layout using cards and sections
+
+These decisions follow WCAG AA accessibility principles.
+
+---
+
+## AI Usage
+
+AI tools were used for:
+
+* planning
+* UI generation
+* accessibility review
+* improvement suggestions
+
+Prompt logs are included in `AI_PROMPT_LOG.md`.
