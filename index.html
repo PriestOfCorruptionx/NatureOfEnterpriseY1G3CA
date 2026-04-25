@@ -167,6 +167,7 @@
   <button onclick="showSection('lost')">Lost & Found</button>
   <button onclick="showSection('helpdesk')">Helpdesk</button>
   <button onclick="showSection('accessibility')">Accessibility</button>
+  <button onclick="showSection('ml')">ML Similar Events</button>
 </nav>
 
 <main>
@@ -288,7 +289,17 @@
     <button class="submit-btn" onclick="toggleContrast()">Toggle High Contrast</button>
   </div>
 </section>
+  
+<section id="ml">
+  <h2>ML Similar Events</h2>
+  <p>
+    This feature uses a lightweight machine learning approach to group fictional campus events into themes.
+  </p>
 
+  <button class="submit-btn" onclick="runML()">Run ML Clustering</button>
+
+  <div id="mlResult" class="grid" style="margin-top:20px;"></div>
+</section>
 </main>
 
 <footer>
@@ -347,6 +358,65 @@
   function toggleContrast() {
     document.body.classList.toggle("high-contrast");
   }
+  const fictionalEvents = [
+  { title: "Gaming Society FIFA Tournament", description: "competitive esports gaming football tournament" },
+  { title: "Coding Club JavaScript Workshop", description: "programming coding web development javascript beginner" },
+  { title: "Music Society Open Mic", description: "music singing performance open mic creative arts" },
+  { title: "Careers CV Workshop", description: "career jobs cv interview employment professional skills" },
+  { title: "Wellbeing Yoga Session", description: "health wellbeing relaxation yoga mindfulness stress" },
+  { title: "Hackathon Night", description: "coding programming teamwork software challenge development" },
+  { title: "Student Football Trials", description: "sports football fitness team competition training" },
+  { title: "Mental Health Talk", description: "wellbeing health mindfulness support stress student life" }
+];
+
+function runML() {
+  const clusters = {
+    "Technology": [],
+    "Sports & Gaming": [],
+    "Wellbeing": [],
+    "Creative & Career": []
+  };
+
+  fictionalEvents.forEach(event => {
+    const text = event.description.toLowerCase();
+
+    let scores = {
+      "Technology": scoreText(text, ["coding", "programming", "javascript", "software", "web"]),
+      "Sports & Gaming": scoreText(text, ["sports", "football", "fitness", "gaming", "esports"]),
+      "Wellbeing": scoreText(text, ["health", "wellbeing", "mindfulness", "stress", "yoga"]),
+      "Creative & Career": scoreText(text, ["music", "creative", "career", "jobs", "interview"])
+    };
+
+    let bestCluster = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+    clusters[bestCluster].push(event);
+  });
+
+  const result = document.getElementById("mlResult");
+  result.innerHTML = "";
+
+  for (let cluster in clusters) {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    let eventsHTML = clusters[cluster]
+      .map(e => `<li>${e.title}</li>`)
+      .join("");
+
+    card.innerHTML = `
+      <h3>${cluster}</h3>
+      <p>Events grouped by shared text features:</p>
+      <ul>${eventsHTML}</ul>
+    `;
+
+    result.appendChild(card);
+  }
+}
+
+function scoreText(text, keywords) {
+  return keywords.reduce((score, word) => {
+    return score + (text.includes(word) ? 1 : 0);
+  }, 0);
+}
 </script>
 
 </body>
