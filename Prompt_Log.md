@@ -14,7 +14,7 @@ Prompt
 
 ROLE: Senior frontend developer and beginner-friendly machine learning reviewer.
 
-CONTEXT: We are building a Campus Companion web app for first-year students.
+CONTEXT: I am building a Campus Companion web app for first-year students.
 
 CONSTRAINTS:
 
