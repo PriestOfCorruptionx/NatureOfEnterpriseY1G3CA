@@ -1,4 +1,4 @@
-# AI Prompt Log – Campus Companion
+# Prompt Log – Campus Companion
 
 ## Prompt 1 – Planning
 
