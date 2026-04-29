@@ -1,0 +1,56 @@
+# User Testing
+
+## Testing Method
+
+Three users tested the Campus Companion app. Each user was asked to complete three tasks.
+
+The tasks were:
+
+1. Find a society event.
+2. Submit a helpdesk ticket.
+3. Find or add a Lost & Found item.
+
+---
+
+## User Testing Results
+
+| User | Task 1: Find Society Event | Task 2: Submit Helpdesk Ticket | Task 3: Use Lost & Found | Time / Notes | Success |
+|---|---|---|---|---|---|
+| User 1 | Found Gaming Society event | Submitted Wi-Fi ticket | Added lost item | Completed quickly, no help needed | Success |
+| User 2 | Found Coding Club event | Submitted login issue | Found existing lost item | Needed a few seconds to locate Lost & Found | Success |
+| User 3 | Found Music Society event | Submitted printer issue | Added headphones as lost item | Suggested buttons could stand out more | Success |
+
+---
+
+## User Feedback
+
+### User 1
+
+The app was easy to understand and the dashboard gave a good overview.
+
+### User 2
+
+The navigation was clear, but the Lost & Found section could be easier to notice.
+
+### User 3
+
+The form was simple to use, but buttons could be more visually obvious.
+
+---
+
+## Improvements Made After User Testing
+
+| Feedback | Improvement Made |
+|---|---|
+| Lost & Found was not immediately obvious | Kept it in the main navigation and used a clear section heading. |
+| Buttons could stand out more | Improved button colour and hover effect. |
+| Users needed confirmation after submitting a ticket | Added ticket confirmation message. |
+| Accessibility should be easier to find | Added Accessibility as a main navigation item. |
+
+---
+
+## Final Testing Reflection
+
+The user testing showed that the app was easy to use for the main student tasks. All three users successfully completed the required tasks. The main improvements were focused on accessibility, clearer feedback, and making navigation more visible.
+
+The accessibility testing helped improve the app by adding high contrast mode, large text mode, labelled forms, and clear confirmation messages. The app is now more suitable for first-year students and better aligned with WCAG accessibility principles.
