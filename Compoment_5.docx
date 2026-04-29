@@ -1,3 +1,56 @@
+# Component 5 – Accessibility and User Testing
+
+## 1. Accessibility Testing
+
+The Campus Companion app was tested against a WCAG-based checklist. The aim was to check whether users could navigate, read content, complete forms, and use accessibility settings.
+
+## WCAG Checklist
+Our site alligned with the wcag checklist
+
+---
+
+## Issues Found and Changes Made
+
+### Issue 1: Text could be difficult to read for some users
+
+**Problem:**  
+Some users may find normal text size too small.
+
+**Change made:**  
+A Large Text Mode button was added in the Accessibility section.
+
+---
+
+### Issue 2: Some users may need stronger colour contrast
+
+**Problem:**  
+The original colour palette may not be suitable for all users.
+
+**Change made:**  
+A High Contrast Mode button was added.
+
+---
+
+### Issue 3: Forms needed clearer guidance
+
+**Problem:**  
+The Lost & Found and Helpdesk forms needed clear labels.
+
+**Change made:**  
+Labels were added above each input field, and required fields were used.
+
+---
+
+### Issue 4: Users needed feedback after submitting forms
+
+**Problem:**  
+Users may not know if the form worked.
+
+**Change made:**  
+The Helpdesk form now displays a submitted ticket confirmation.
+
+---
+
 # User Testing
 
 ## Testing Method
