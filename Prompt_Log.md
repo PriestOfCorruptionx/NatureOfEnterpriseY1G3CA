@@ -12,7 +12,7 @@ Create the ML feature for the Campus Companion app using fictional event data.
 
 Prompt
 
-ROLE: You are a senior frontend developer and beginner-friendly machine learning reviewer.
+ROLE:senior frontend developer and beginner-friendly machine learning reviewer.
 
 CONTEXT: We are building a Campus Companion web app for first-year students.
 
