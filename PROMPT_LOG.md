@@ -80,4 +80,3 @@ Provide the updated code.
 
 SELF-CHECK:
 Check that the app still uses fictional data only.
-
